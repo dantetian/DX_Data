@@ -770,7 +770,7 @@ message PlayBack {
 		optional POSITION_TYPE position = 2; //玩家当前座次
 		optional CommonProp common_prop = 3; //玩家基本数据
 		optional WechatUnion wechat = 4; //微信个人信息
-		repeated MultiplePai pai_list = 5; //开局牌数据
+		repeated PaiElement pai_list = 5; //开局牌数据
 	}
 	repeated PlayerElement player_list = 5; //开局牌数据
 	repeated PaiOperation oper_list = 6; //牌局各个玩家操作
