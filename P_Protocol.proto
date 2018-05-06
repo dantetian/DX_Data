@@ -775,6 +775,7 @@ message PlayBack {
 	repeated PlayerElement player_list = 5; //开局牌数据
 	repeated PaiOperation oper_list = 6; //牌局各个玩家操作
 	optional int32 create_time = 7; //房间创建时间
+	repeated RobElement rob_list = 8; //斗地主//叫地主列表
 }
 
 //获取奖励
