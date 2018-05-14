@@ -659,7 +659,7 @@ message Item_Potion {
 message Item_RoomCard {
 	optional ASSET_TYPE type_t = 1 [ default = ITEM_TYPE_ROOM_CARD ];
 	optional Item_CommonProp item_common_prop = 2; //物品公共属性
-	optional int32 rounds = 3 [ default = 1 ]; //该张房卡可以玩多少局麻将
+	optional float rounds = 3 [ default = 1 ]; //该张房卡可以玩多少局麻将
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
