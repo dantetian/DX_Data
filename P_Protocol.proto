@@ -457,6 +457,7 @@ enum META_TYPE {
 	META_TYPE_SHARE_PLAY_BACK = 19; //回放
 	META_TYPE_SHARE_MATCHING_STATS = 20; //匹配数据
 	META_TYPE_SHARE_CLAN_OPERATION = 21; //茶馆操作
+	META_TYPE_SHARE_SWITCH_ROOM = 22; //切换房间
 	META_TYPE_SHARE_COUNT = 50; //共享协议最大数量
 	///////////客户端发送数据///////////
 	META_TYPE_C2S_BEGIN = 51; //客户端开始协议
@@ -961,6 +962,12 @@ message ClanOperation {
 	optional BRIEF_TYPE brief_type = 15; //查询列表类型
 	repeated ClanBrief clan_list = 16; //茶馆列表简要讯息//列表显示信息
 	optional int32 server_id = 17; //服务器内服标识
+}
+
+//匹配房切换房间
+message SwitchRoom {
+	optional META_TYPE type_t = 1 [ default = META_TYPE_SHARE_SWITCH_ROOM ];
+	optional int32 ret_code = 2; //返回错误码
 }
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
