@@ -254,7 +254,7 @@ message Player {
 	optional PlayerSetting game_setting = 12; //游戏设置
 	repeated int64 room_history = 13; //牌局历史数据
 	optional int64 room_id = 14; //玩家所在房间
-	optional bool card_count_changed = 15 [ default = false ]; //是否房卡加倍
+	optional ROOM_TYPE room_type = 15; //玩家所在房间类型
 	optional ROOM_TYPE matching_room_type = 16; //正在匹配房间类型
 	repeated int64 clan_hosters = 17; //玩家创建的茶馆
 	repeated int64 clan_joiners = 18; //玩家加入的茶馆
@@ -867,6 +867,7 @@ enum GAME_OPER_TYPE {
 	GAME_OPER_TYPE_OFFLINE = 8; //离线
 	GAME_OPER_TYPE_ONLINE = 9; //在线
 	GAME_OPER_TYPE_JIAOZHUANG = 10; //叫庄//叫地主//抢地主
+	GAME_OPER_TYPE_SWITCH_ROOM = 11; //换房间
 }
 
 //游戏操作
