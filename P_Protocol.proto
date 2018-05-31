@@ -869,6 +869,7 @@ enum GAME_OPER_TYPE {
 	GAME_OPER_TYPE_JIAOZHUANG = 10; //叫庄//叫地主//抢地主
 	GAME_OPER_TYPE_SWITCH_ROOM = 11; //换房间
 	GAME_OPER_TYPE_LOGOUT = 12; //强制退出
+	GAME_OPER_TYPE_JIABEI = 13; //是否加倍
 }
 
 //游戏操作
@@ -878,7 +879,7 @@ message GameOperation {
 	optional int64 source_player_id = 3; //来自XX玩家的操作
 	optional int64 destination_player_id = 4; //针对XX玩家的操作：踢人
 	optional ERROR_CODE error_code = 5;
-	optional int32 beilv = 6; //倍率//GAME_OPER_TYPE_JIAOZHUANG//不叫不填
+	optional int32 beilv = 6; //倍率//GAME_OPER_TYPE_JIAOZHUANG//GAME_OPER_TYPE_JIABEI//
 }
 
 //商城购买
@@ -1250,7 +1251,8 @@ message BattleList {
 //叫地主元素
 message RobElement {
 	optional int64 player_id = 1; //玩家
-	optional int32 beilv = 2; //斗地主//倍率//是否叫地主
+	optional int32 beilv = 2; //倍率//是否叫地主
+	optional GAME_OPER_TYPE oper_type = 3; //是否加倍
 }
 
 //房间全部数据
