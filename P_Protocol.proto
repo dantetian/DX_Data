@@ -1016,15 +1016,17 @@ message JoinMatch {
 }
 
 message MatchHistory {
-	optional int32 curr_rounds = 1; //本次轮次//如果是0则表示是总榜
-	optional int32 battle_time = 2; //对战时间
-	repeated PlayerBrief top_list = 3; //排行榜
+	optional int64 clan_id = 1; //俱乐部ID
+	optional int32 curr_rounds = 2; //本次轮次//如果是0则表示是总榜
+	optional int32 battle_time = 3; //对战时间
+	repeated PlayerBrief top_list = 4; //排行榜
 }
 
 //比赛轮次记录
 message ClanMatchHistory {
 	optional META_TYPE type_t = 1 [ default = META_TYPE_SHARE_CLAN_MATCH_HISTORY ];
-	optional MatchHistory history = 2; //排行榜数据
+	optional int64 clan_id = 2; //俱乐部ID
+	optional MatchHistory history = 3; //排行榜数据
 }
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
