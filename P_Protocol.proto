@@ -461,6 +461,7 @@ enum META_TYPE {
 	META_TYPE_SHARE_SWITCH_ROOM = 22; //切换房间
 	META_TYPE_SHARE_OPEN_MATCH = 23; //发起比赛
 	META_TYPE_SHARE_JOIN_MATCH = 24; //参加比赛
+	META_TYPE_SHARE_CLAN_MATCH_HISTORY = 25; //比赛轮次信息
 	META_TYPE_SHARE_COUNT = 50; //共享协议最大数量
 	///////////客户端发送数据///////////
 	META_TYPE_C2S_BEGIN = 51; //客户端开始协议
@@ -1014,6 +1015,17 @@ message JoinMatch {
 	optional JOIN_TYPE join_type = 3;
 }
 
+message MatchHistory {
+	optional int32 curr_rounds = 1; //本次轮次//如果是0则表示是总榜
+	optional int32 battle_time = 2; //对战时间
+	repeated PlayerBrief top_list = 3; //排行榜
+}
+
+//比赛轮次记录
+message ClanMatchHistory {
+	optional META_TYPE type_t = 1 [ default = META_TYPE_SHARE_CLAN_MATCH_HISTORY ];
+	optional MatchHistory history = 2; //排行榜数据
+}
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 //服务器发送协议定义区
