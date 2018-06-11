@@ -303,14 +303,13 @@ message Clan {
 		optional bytes name = 2; //玩家名字
 		optional CLAN_MEM_STATUS_TYPE status = 3; //成员状态
 		optional bytes headimgurl = 4; //头像 
-		optional int32 match_score = 5; //上次比赛积分
 	}
 	repeated Member member_list = 8; //成员
 	optional bool dismiss = 9; //是否逻辑解散
 	message RoomHistory {
 		optional int64 room_id = 1; //房间ID	
 		optional int32 battle_time = 2; //对战时间
-		repeated PlayerBrief player_list = 3; //玩家分数信息//索引4之前的简要数据
+		repeated PlayerBrief player_list = 3; //玩家分数信息
 	}
 	repeated RoomHistory battle_history = 10; //历史战绩
 	repeated SystemMessage message_list = 11; //消息列表
@@ -318,6 +317,8 @@ message Clan {
 	optional int32 sys_messsage_update_time = 13; //上次操作时间
 	optional OpenMatch open_match = 14; //比赛设置
 	repeated int64 applicants = 15; //报名者
+	repeated MatchHistory match_history = 16; //当轮战绩
+	repeated MatchHistory last_match_history = 17; //上轮战绩
 }
 
 /////////////////////////////////////////////////////
