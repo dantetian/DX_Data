@@ -315,10 +315,14 @@ message Clan {
 	repeated SystemMessage message_list = 11; //消息列表
 	optional int32 online_mem_count = 12; //在线成员数量
 	optional int32 sys_messsage_update_time = 13; //上次操作时间
-	optional OpenMatch open_match = 14; //比赛设置
-	repeated int64 applicants = 15; //报名者
-	repeated MatchHistory match_history = 16; //本期战绩
-	repeated MatchHistory last_match_history = 17; //上期战绩
+	repeated int64 applicants = 14; //报名者
+	optional MatchHistoryRecord match_history = 15; //本期战绩
+	optional MatchHistoryRecord last_match_history = 16; //上期战绩
+}
+
+message MatchHistoryRecord {
+	optional OpenMatch open_match = 1; //比赛设置
+	repeated MatchHistory history_list = 2; //战绩
 }
 
 /////////////////////////////////////////////////////
