@@ -435,6 +435,12 @@ enum ERROR_CODE {
 	ERROR_CLAN_DISMISS_GAMING = 87; //茶馆：无法解散，当前有房间进行中
 	ERROR_CLAN_HAS_APPLY = 88; //茶馆：已经申请过加入茶馆
 	ERROR_CLAN_ROOM_COUNT_LIMIT = 89; //茶馆：创建房间已经达到上限
+	
+	ERROR_CLAN_MATCH_TIME_INVALID = 90; //比赛：时间选择非法
+	ERROR_CLAN_MATCH_NOT_HOSTER = 91; //比赛：不是老板，没有权限
+	ERROR_CLAN_MATCH_HAS_BEEN_APP = 92; //比赛：已经报名
+	ERROR_CLAN_MATCH_HASNOT_BEEN_APP = 93; //比赛：没有报名，不能参加比赛
+	ERROR_CLAN_MATCH_NO_TIME_REACH = 94; //比赛：时间未到
 }
 
 /////////////////////////////////////////////////////
