@@ -317,8 +317,8 @@ message Clan {
 	optional int32 sys_messsage_update_time = 13; //上次操作时间
 	optional OpenMatch open_match = 14; //比赛设置
 	repeated int64 applicants = 15; //报名者
-	repeated MatchHistory match_history = 16; //当轮战绩
-	repeated MatchHistory last_match_history = 17; //上轮战绩
+	repeated MatchHistory match_history = 16; //本期战绩
+	repeated MatchHistory last_match_history = 17; //上期战绩
 }
 
 /////////////////////////////////////////////////////
@@ -1022,6 +1022,8 @@ message MatchHistory {
 	optional int32 curr_rounds = 2; //本次轮次//如果是0则表示是总榜
 	optional int32 battle_time = 3; //对战时间
 	repeated PlayerBrief top_list = 4; //排行榜
+	optional int32 room_total = 5; //本轮房间总数
+	optional int32 room_remain = 6; //本轮房间剩余
 }
 
 //比赛轮次记录
