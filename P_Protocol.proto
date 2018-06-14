@@ -1008,7 +1008,7 @@ message OpenMatch {
 	optional int64 clan_id = 2; //俱乐部ID
 	optional PAY_TYPE pay_type = 3; //付费方式
 	optional int32 ticket_count = 4; //付费房卡数
-	optional int32 people_down = 5; //参加比赛人数下限
+	optional int32 people_down = 5 [ default = 3 ]; //参加比赛人数下限
 	optional int32 people_up = 6; //参加比赛人数上限
 	optional int32 lunci_count = 7; //比赛轮次，根据此值求每次淘汰玩家数量
 	optional int32 rounds_count = 8 [ default = 4 ]; //每轮局数
