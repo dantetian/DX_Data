@@ -1040,8 +1040,8 @@ message MatchHistory {
 //比赛轮次记录
 message ClanMatchHistory {
 	optional META_TYPE type_t = 1 [ default = META_TYPE_SHARE_CLAN_MATCH_HISTORY ];
-	optional int64 match_id = 2; //比赛ID//clan_match_list中ID
-	optional MatchHistoryRecord history = 3; //排行榜数据
+	optional int64 clan_id = 2; 
+	repeated MatchHistoryRecord list = 3; //排行榜数据
 }
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
