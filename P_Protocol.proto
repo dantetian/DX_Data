@@ -442,6 +442,7 @@ enum ERROR_CODE {
 	ERROR_CLAN_MATCH_HAS_BEEN_APP = 92; //比赛：已经报名
 	ERROR_CLAN_MATCH_HASNOT_BEEN_APP = 93; //比赛：没有报名，不能参加比赛
 	ERROR_CLAN_MATCH_NO_TIME_REACH = 94; //比赛：时间未到
+	ERROR_CLAN_MATCH_HAS_OPENED = 95; //比赛已经开始或进行中，不能再次开启
 }
 
 /////////////////////////////////////////////////////
