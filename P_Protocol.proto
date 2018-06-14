@@ -143,6 +143,7 @@ message PlayerBrief {
 	optional bytes nickname = 2; //玩家名称
 	optional bytes headimgurl = 3; //头像
 	optional int32 score = 4; //积分和
+	optional int32 out_rounds = 5; //比赛淘汰轮次
 }
 
 //游戏记录
