@@ -1039,7 +1039,7 @@ message MatchHistory {
 	optional int32 room_remain = 6; //本轮房间剩余
 }
 
-//比赛轮次记录
+//茶馆比赛记录
 message ClanMatchHistory {
 	optional META_TYPE type_t = 1 [ default = META_TYPE_SHARE_CLAN_MATCH_HISTORY ];
 	optional int64 clan_id = 2; 
