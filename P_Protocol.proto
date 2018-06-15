@@ -668,6 +668,7 @@ message Room {
 	optional bytes enter_password = 3; //房间密码：仅好友房存在
 	optional RoomOptions options = 4; //房间设置
 	optional int64 clan_id = 5; //茶馆ID
+	optional int32 curr_round = 6; //当前轮次
 }
 
 /////////////////////////////////////////////////////
