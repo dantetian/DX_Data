@@ -447,6 +447,7 @@ enum ERROR_CODE {
 	ERROR_CLAN_MATCH_DIMISS = 96; //比赛已经开始或进行中，不能解散
 	ERROR_CLAN_MATCH_WAITING = 97; //等待其他玩家结算
 	ERROR_CLAN_MATCH_TIME_OUT = 98; //比赛已经开始，不能加入比赛
+	ERROR_CLAN_MATCH_OUT = 99; //已经淘汰，不能加入比赛
 }
 
 /////////////////////////////////////////////////////
