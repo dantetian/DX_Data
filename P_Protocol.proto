@@ -84,6 +84,7 @@ enum ROOM_CARD_CHANGED_TYPE {
 	ROOM_CARD_CHANGED_TYPE_DISMISS_CLAN = 8; //茶馆解散返还
 	ROOM_CARD_CHANGED_TYPE_JOIN_CLAN_MATCH = 9; //参加俱乐部比赛//报名
 	ROOM_CARD_CHANGED_TYPE_START_CLAN_MATCH = 10; //参加俱乐部比赛//开局
+	ROOM_CARD_CHANGED_TYPE_CLAN_MATCH_DISMISS = 11; //俱乐部比赛解散
 }
 
 //系统冷却
@@ -448,6 +449,8 @@ enum ERROR_CODE {
 	ERROR_CLAN_MATCH_WAITING = 97; //等待其他玩家结算
 	ERROR_CLAN_MATCH_TIME_OUT = 98; //比赛已经开始，不能加入比赛
 	ERROR_CLAN_MATCH_OUT = 99; //已经淘汰，不能加入比赛
+	ERROR_CLAN_MATCH_DISMISS_NO_PERMISSION = 100; //比赛解散：没有权限
+	ERROR_CLAN_MATCH_DISMISS_STARTED = 101; //比赛解散：比赛已经开始
 }
 
 /////////////////////////////////////////////////////
@@ -481,6 +484,7 @@ enum META_TYPE {
 	META_TYPE_SHARE_OPEN_MATCH = 23; //发起比赛
 	META_TYPE_SHARE_JOIN_MATCH = 24; //参加比赛
 	META_TYPE_SHARE_CLAN_MATCH_HISTORY = 25; //比赛轮次信息
+	META_TYPE_SHARE_CLAN_MATCH_DISMISS = 26; //解散比赛
 	META_TYPE_SHARE_COUNT = 50; //共享协议最大数量
 	///////////客户端发送数据///////////
 	META_TYPE_C2S_BEGIN = 51; //客户端开始协议
@@ -1049,6 +1053,13 @@ message ClanMatchHistory {
 	optional META_TYPE type_t = 1 [ default = META_TYPE_SHARE_CLAN_MATCH_HISTORY ];
 	optional int64 clan_id = 2; 
 	repeated MatchHistoryRecord list = 3; //排行榜数据
+}
+
+//解散比赛
+message ClanMatchDismiss {
+	optional META_TYPE type_t = 1 [ default = META_TYPE_SHARE_CLAN_MATCH_DISMISS ];
+	optional int64 clan_id = 2; 
+	optional int32 room_card_count = 3;  //服务器内部使用
 }
 /////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
