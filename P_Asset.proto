@@ -604,6 +604,7 @@ message ClanLimit {
 	optional int32 join_match_time_last = 13 [ default = 300 ]; //参加比赛时间限制(单位：秒)
 	optional int32 match_rounds = 14 [ default = 4 ]; //比赛局数
 	optional int32 match_timeout = 15 [ default = 24 ]; //比赛超时时间(单位：小时)
+	optional int64 match_activiy_id = 16; //比赛[Activity]数据活动控制ID
 }
 
 /////////////////////////////////////////////////////
