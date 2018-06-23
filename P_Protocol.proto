@@ -545,6 +545,7 @@ enum META_TYPE {
 	META_TYPE_S2S_COMMON_PROP_SYNC = 1008; //玩家基础属性同步
 	META_TYPE_S2S_CLAN_MATCH = 1009; //俱乐部比赛
 	META_TYPE_S2S_CLAN_CREATE_ROOM = 1010; //俱乐部比赛开启房间
+	META_TYPE_S2S_ENTER_GAME_SERVER = 1011; //进入逻辑服务器
 }
 
 /////////////////////////////////////////////////////
@@ -1496,4 +1497,10 @@ message ClanCreateRoom {
 	optional CreateRoom create_room = 3; //开房设置
 	optional int32 room_count = 4;
 	repeated int64 room_list = 5; //房间列表
+}
+
+//进入逻辑服务器返回
+message EnterGameServer {
+	optional META_TYPE type_t = 1 [ default = META_TYPE_S2S_ENTER_GAME_SERVER ];
+	optional int32 error_code = 2; //错误码
 }
