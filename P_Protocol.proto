@@ -452,6 +452,7 @@ enum ERROR_CODE {
 	ERROR_CLAN_MATCH_DISMISS_NO_PERMISSION = 100; //比赛解散：没有权限
 	ERROR_CLAN_MATCH_DISMISS_STARTED = 101; //比赛解散：比赛已经开始
 	ERROR_CLAN_MATCH_PARA = 102; //茶馆比赛：人数不能实现轮数关系(人数下限>=轮次*3)
+	ERROR_CLAN_MATCH_LUNKONG_WAITING = 103; //茶馆比赛：轮空等待
 }
 
 /////////////////////////////////////////////////////
