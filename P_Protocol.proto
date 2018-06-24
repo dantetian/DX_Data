@@ -1051,6 +1051,7 @@ message MatchHistory {
 	repeated PlayerBrief top_list = 4; //排行榜
 	optional int32 room_total = 5; //本轮房间总数
 	optional int32 room_remain = 6; //本轮房间剩余
+	repeated PlayerBrief unmathers = 7; //轮空玩家
 }
 
 //茶馆比赛记录
