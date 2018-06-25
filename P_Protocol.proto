@@ -454,6 +454,7 @@ enum ERROR_CODE {
 	ERROR_CLAN_MATCH_PARA = 102; //茶馆比赛：人数不能实现轮数关系(人数下限>=轮次*3)
 	ERROR_CLAN_MATCH_LUNKONG_WAITING = 103; //茶馆比赛：轮空等待
 	ERROR_CLAN_MATCH_ACTIVITY_CLOSED = 104; //茶馆比赛：活动关闭
+	ERROR_CLAN_MATCH_ENTER_ROOM = 105; //茶馆比赛：比赛中，不能进入其他房间
 }
 
 /////////////////////////////////////////////////////
