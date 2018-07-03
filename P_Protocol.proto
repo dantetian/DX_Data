@@ -455,6 +455,7 @@ enum ERROR_CODE {
 	ERROR_CLAN_MATCH_LUNKONG_WAITING = 103; //茶馆比赛：轮空等待
 	ERROR_CLAN_MATCH_ACTIVITY_CLOSED = 104; //茶馆比赛：活动关闭
 	ERROR_CLAN_MATCH_ENTER_ROOM = 105; //茶馆比赛：比赛中，不能进入其他房间
+	ERROR_CLAN_MATCH_ROOM_DISMISS_LIMIT = 106; //茶馆比赛：暂时不能解散房间
 }
 
 /////////////////////////////////////////////////////
