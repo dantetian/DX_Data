@@ -1022,7 +1022,7 @@ enum PAY_TYPE {
 message OpenMatch {
 	optional META_TYPE type_t = 1 [ default = META_TYPE_SHARE_OPEN_MATCH ];
 	optional int64 clan_id = 2; //俱乐部ID
-	optional PAY_TYPE pay_type = 3; //付费方式
+	optional PAY_TYPE pay_type = 3 [ default = PAY_TYPE_ONCE ]; //付费方式
 	optional int32 ticket_count = 4; //付费房卡数
 	optional int32 people_down = 5 [ default = 3 ]; //参加比赛人数下限
 	optional int32 people_up = 6; //参加比赛人数上限
